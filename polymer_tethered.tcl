@@ -1,6 +1,6 @@
-############################################################# #######################
-#  A SAW linear polymer fixed at both ends. Proteins form droplets with of it    ####
-#             IMSc September 2022                                                ####
+#####################################################################################
+#  A semiflexible polymer fixed at both ends. Proteins form droplets with of it  ####
+#                     IMSc September 2024                                        ####
 #####################################################################################
   
 source ./functions.tcl
@@ -41,13 +41,12 @@ puts [setmd skin]
 puts [integrate]
 puts [thermostat]
 
-#t_random seed 16180
-
 ############################################################################
 # 4 Interactions                                            
 #Type for specific interaction between different particles and constraints
-#0 : for all monomers belonging to polymer
-#1 : for all constraints
+#0 to 23 : for all monomers belonging to polymer
+#24 : proteins
+#25 : for all constraints
 ############################################################################
 inter 0 harmonic 100. 1
 inter 4 angle_harmonic 15 [expr [PI]]
