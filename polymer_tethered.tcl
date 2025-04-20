@@ -206,7 +206,7 @@ for { set k 0 } { $k < $warm_loop} { incr k } {
     inter forcecap individual
     integrate $warm_step   
     
-    set box_length_z [expr $box_length_z*1]
+    set box_length_z [expr $box_length_z*0.99]
     
     change_volume $box_length_z z
     constraint delete
