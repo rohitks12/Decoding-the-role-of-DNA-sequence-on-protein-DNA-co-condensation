@@ -81,7 +81,7 @@ for {set i 1} {$i < $type_max } {incr i} {
 
 
 
-set fp [open "./Type_ID_seq.dat" r] #load sequence info
+set fp [open "./TypeID_seq.dat" r] #load sequence info
 set index {}
 set TypeID {}
 
@@ -95,7 +95,7 @@ close $fp
 
 
 #monomer protein interaction
-set epsilon_values {0.0 1.75 2.25 }
+set epsilon_values {0.0 0.0 2.00 }
 
 
 for {set i 1} {$i < $type_max} {incr i} {
@@ -141,7 +141,7 @@ set bond_length 1.0
 set bond_angle [expr [PI]]
 
 
-set fp [open "./re_0.2_config_6.dat" r] #load the polymer configuration file
+set fp [open "./polymer_config.dat" r] #load the polymer configuration file
 set index {}
 set pos_x {}
 set pos_y {}
