@@ -7,9 +7,9 @@ This repository contains ESPResSo input files, type-ID mapping files, initial co
 ## Type ID Files  
 **Files:** `TypeID_homo.dat`, `TypeID_hetero_I.dat`, `TypeID_hetero_II.dat`, `TypeID_lambda.dat`
 
-Each file contains **2 columns and 500 rows**:
-- The **first column** lists the particle IDs (or indices) corresponding to the 500 monomers in the polymer.
-- The **second column** specifies the **type IDs** assigned to each monomer.
+Each file contains 2 columns and 500 rows:
+- The first column lists the particle IDs (or indices) corresponding to the 500 monomers in the polymer.
+- The second column specifies the type IDs assigned to each monomer.
 
 These type IDs are used in the main simulation scripts:
 - `main_script_homogeneous.tcl`
@@ -17,7 +17,7 @@ These type IDs are used in the main simulation scripts:
 - `main_script_heterogeneous_II.tcl`
 - `main_script_lambda.tcl`
 
-They determine the **monomer–protein interaction strengths** during the simulation.
+They determine the monomer–protein interaction strengths during the simulation.
 
 ---
 
@@ -25,9 +25,9 @@ They determine the **monomer–protein interaction strengths** during the simula
 **Files:** `config_Re_0.2.dat`, `config_Re_0.4.dat`, `config_Re_0.6.dat`, `config_Re_0.8.dat`
 
 These files provide the initial spatial configuration of the polymer chain and are used as input in the simulation scripts.  
-Each file contains **500 rows and 4 columns**:
-- **Column 1:** Particle ID (0 to 499)
-- **Columns 2–4:** Initial coordinates (x, y, z) of each monomer in the three-dimensional simulation box
+Each file contains 500 rows and 4 columns:
+- Column 1: Particle ID (0 to 499)
+- Columns 2–4: Initial coordinates (x, y, z) of each monomer in the three-dimensional simulation box
 
 ---
 
