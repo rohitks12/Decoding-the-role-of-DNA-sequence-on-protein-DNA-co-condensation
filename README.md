@@ -8,14 +8,14 @@ This repository contains ESPResSo input files, type-ID mapping files, initial co
 **Files:** `TypeID_homo.dat`, `TypeID_hetero_I.dat`, `TypeID_hetero_II.dat`, `TypeID_lambda.dat`
 
 Each file contains 2 columns and 500 rows:
-- The first column lists the particle IDs (or indices) corresponding to the 500 monomers in the polymer.
-- The second column specifies the type IDs assigned to each monomer.
+The first column lists the particle IDs (or indices) corresponding to the 500 monomers in the polymer.
+The second column specifies the type IDs assigned to each monomer.
 
 These type IDs are used in the main simulation scripts:
-- `main_script_homogeneous.tcl`
-- `main_script_heterogeneous_I.tcl`
-- `main_script_heterogeneous_II.tcl`
-- `main_script_lambda.tcl`
+`main_script_homogeneous.tcl`
+`main_script_heterogeneous_I.tcl`
+`main_script_heterogeneous_II.tcl`
+`main_script_lambda.tcl`
 
 They determine the monomer–protein interaction strengths during the simulation.
 
@@ -26,20 +26,20 @@ They determine the monomer–protein interaction strengths during the simulation
 
 These files provide the initial spatial configuration of the polymer chain and are used as input in the simulation scripts.  
 Each file contains 500 rows and 4 columns:
-- Column 1: Particle ID (0 to 499)
-- Columns 2–4: Initial coordinates (x, y, z) of each monomer in the three-dimensional simulation box
+Column 1: Particle ID (0 to 499),
+Columns 2–4: Initial coordinates (x, y, z) of each monomer in the three-dimensional simulation box
 
 ---
 
 ## Simulation Scripts
 
-- `main_script_homogeneous.tcl`  
+`main_script_homogeneous.tcl`  
   Loads `TypeID_homo.dat`, initializes a homogeneous polymer, and sets interaction parameters for monomer–protein interactions.
 
-- `main_script_heterogeneous_I.tcl` and `main_script_heterogeneous_II.tcl` 
+`main_script_heterogeneous_I.tcl` and `main_script_heterogeneous_II.tcl` 
   Load the corresponding heterogeneous type-ID files to simulate polymers with two types of monomers.
 
-- `main_script_lambda.tcl`
+ `main_script_lambda.tcl`
   Uses `TypeID_lambda.dat` to simulate protein condensation with partial lambda DNA composition.
 
 ---
@@ -61,7 +61,7 @@ This Tcl script defines utility procedures for managing simulation data in ESPRe
 
 ## Notes
 
-- We have used ESPResSo-3.3.1 for performing these simulations.
-- It is nessary that the type ID file and initial configuration file used in a simulation match the setup expected by the script.
-- Parameters like protein concentration,interaction strength and runtime can be modified by editing the corresponding sections in the `.tcl` scripts.
+We have used ESPResSo-3.3.1 for performing these simulations.
+It is nessary that the type ID file and initial configuration file used in a simulation match the setup expected by the script.
+Parameters like protein concentration,interaction strength and runtime can be modified by editing the corresponding sections in the `.tcl` scripts.
 
