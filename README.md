@@ -61,6 +61,7 @@ This Tcl script defines utility procedures for managing simulation data in ESPRe
 
 ## Notes
 
+- We have used ESPResSo-3.3.1 for performing these simulations.
 - It is nessary that the type ID file and initial configuration file used in a simulation match the setup expected by the script.
 - Parameters like protein concentration,interaction strength and runtime can be modified by editing the corresponding sections in the `.tcl` scripts.
 
