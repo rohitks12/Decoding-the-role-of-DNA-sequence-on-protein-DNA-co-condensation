@@ -61,6 +61,6 @@ This Tcl script defines utility procedures for managing simulation data in ESPRe
 
 ## Notes
 
-- Make sure that the **type ID file** and **initial configuration file** used in a simulation match the setup expected by the script.
-- You can modify simulation parameters (e.g., protein concentration, interaction strength, runtime) by editing the corresponding sections in the `.tcl` scripts.
+- It is nessary that the **type ID file** and **initial configuration file** used in a simulation match the setup expected by the script.
+- Parameters like protein concentration,interaction strength and runtime can be modified by editing the corresponding sections in the `.tcl` scripts.
 
