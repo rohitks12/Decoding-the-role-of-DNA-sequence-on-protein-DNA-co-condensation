@@ -285,7 +285,7 @@ writevcf $vtf
 
 
 set n_steps 5000
-set n_equi 10
+set n_equi 10000
 
 for {set i 0} { $i < $n_equi } { incr i} {
     puts $i
