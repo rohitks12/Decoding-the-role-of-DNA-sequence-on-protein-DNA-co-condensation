@@ -76,10 +76,6 @@ epsilon_list = []
 
 
 
-
-#volume of condensates
-vol = []
-
 # assigning directory
 directory = '/path/to/output_files'
 
