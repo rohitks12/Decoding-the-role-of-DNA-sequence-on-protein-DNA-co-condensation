@@ -1,3 +1,4 @@
+#the file contains 2 columns and 500 rows. The first column lists the particle IDs (or indices) corresponding to the 500 monomers in the polymer. The second column specifies the type IDs assigned to each monomer.
 0,1
 1,1
 2,1
