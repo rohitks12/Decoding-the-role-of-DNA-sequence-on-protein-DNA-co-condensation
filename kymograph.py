@@ -14,7 +14,6 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 def process_configurations(directory, output_path):
-    """Process configuration files and save analysis results"""
     all_z_positions = []
     particle0_z = []  # For the first monomer position (left tethered end)
     particle499_z = []  # For the position of last monomer (right tethered end)
