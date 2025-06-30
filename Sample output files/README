@@ -1,0 +1,9 @@
+This folder contains 100 output files generated from a simulation with the homogeneous DNA. The end-to-end distance is set to 0.6 and the protein concentration is set to 84.5 micromolars.
+
+Each file contains 5 columns.
+
+The first column contains the particle ID of each particle present in the simulation box. 
+
+The next 3 columns contain the position of each particle in three axis of the simulation box. 
+
+The last column contains the TypeID associated with each particle. Here, since the sample is from simulation with homogeneous DNA, typeID associalted with all the monomers is 2 whereas typeID assigned to all the proteins is 24. 
