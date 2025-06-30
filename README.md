@@ -53,6 +53,22 @@ This Tcl code defines procedures for managing simulation data in ESPResSo. It co
 3. `readData`: It reads an input file line-by-line, returning its contents as a list where each element represents one line from the original file. 
 ---
 
+## `force_calculation.py`
+
+This python code computes the capillary forces exerted on "bare" DNA (DNA outside the condensate) by protein-DNA condensation. It uses the DBSCAN clustering algorithm to identify the DNA inside the condensate. Next, it computes the capillary force by calculating the bond stretch between the monomers present outside the condensate. 
+
+## `probability_calculation.py`
+
+This python code calculates the probability of each DNA monomer being part of the condensate. It first identifies monomers in the condensate for each output configuration, scoring them as 1 if they are inside the condensate and 0 if they are not. Next, it processes 3000 output files and averages these scores for each monomer to produce the probability profile. 
+
+## `interfacial_affinity_calculation.py`
+
+The code uses previously calculated probability profiles to identify interfacial monomers. The algorthm searches for increasing trends (left interface) and decreasing trends (right interface) in the probability profile. Once, the interfaces are identified, it computes the interfacial affinity at each interface and then averages these values to get the final average interfacial affinity.  
+
+## `kymograph.py`
+
+This python code generates a kymograph of DNA and protein distributions along the Z-axis over time. It extracts the Z-position of all the particle from output configurations. Next, it bins the data into equal spatial intervals, and normalizes by total particle count. Finally, it plots a heatmap with normalized end-to-end distance on horizontal axis and time on the vertical axis.  
+
 ## Notes
 
 We have used ESPResSo-3.3.1 for performing these simulations.
