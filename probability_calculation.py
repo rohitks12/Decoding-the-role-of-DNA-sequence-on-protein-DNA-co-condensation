@@ -65,7 +65,7 @@ epsilon_list = []
 
 
 # assigning directory
-directory = '/home/rohitks/co-condensation/github/output_files/'
+directory = '/path/to/output_files/'
 
 
 for filename in natsorted(os.listdir(directory)):
@@ -126,7 +126,7 @@ df4 = pd.DataFrame(matrix)
 df5 = df4.tail(3000)
 
 probability = df5.mean(axis=0)
-probability.to_csv('/home/rohitks/co-condensation/github/test/prob_0.002_rep_1.dat')
+probability.to_csv('/path/to/directory/probability.dat')
 
 plt.figure(figsize=(12, 6))
 plt.plot(probability, label="Probability", color="blue")
@@ -134,7 +134,7 @@ plt.title("Probability Array with Transitions (Conc: 0.002, Re: 0.6, Replicate: 
 plt.xlabel("Index")
 plt.ylabel("Probability")
 plt.grid(True)
-plt.savefig('/home/rohitks/co-condensation/github/test/prob_profile.svg', format='svg')
+plt.savefig('/path/to/directory/prob_profile.svg', format='svg')
 plt.close()
 
 ##############################################################################################################################################################################################################
