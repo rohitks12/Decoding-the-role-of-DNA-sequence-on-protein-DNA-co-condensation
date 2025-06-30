@@ -1,5 +1,5 @@
 #####################################################################################################################################################
-#Here we are identifying the interface of the condensates by using the probability profiles of the monomers being inside the condensate.
+#Here, we are identifying the interface of the condensates by using the probability profiles of the monomers being inside the condensate.
 #The code is used in analysis for figure 5 (G) and figure 6 (C and D).
 #Firstly, we identify the increasing trends (left interfaces) and decreasing trends (right interfaces) in the probability profile.
 #Next, we compute the average interfacial affinity based on the probability of monomers in the defined interface and their interaction strength with the proteins.
@@ -27,7 +27,7 @@ for pair in affinity_str.split(","):
 
 
 aff_position = pd.read_csv(
-    "/home/rohitks/co-condensation/mono_500/revision/lambda/TypeID_hetero_I.dat",
+    "/path/to/directory/TypeID_hetero_I.dat",
     sep=",", header=None,
     names=["particle_id", "types"]
 )
@@ -41,7 +41,7 @@ aff_position["aff"] = aff_position["types"].map(aff_map)
 print(aff_position.head())
 
 
-directory = '/home/rohitks/co-condensation/mono_500/revision/lambda/prob_t/'
+directory = '/path/to/directory/'
 
 
 
@@ -188,7 +188,7 @@ for filename in os.listdir(directory):
             ax1.grid(True)
 
             
-            plt.savefig(f'/home/rohitks/co-condensation/github/prob/{conc}_{replicate}_transition_plot_0_to_1.svg', format='svg')
+            plt.savefig(f'/path/to/directory/{conc}_{replicate}_transition_plot_0_to_1.svg', format='svg')
             plt.close()
 
         else:
@@ -238,7 +238,7 @@ for filename in os.listdir(directory):
             ax1.grid(True)
 
             
-            plt.savefig(f'/home/rohitks/co-condensation/github/prob//{conc}_{replicate}_reverse_transition_plot_1_to_0.svg', format='svg')
+            plt.savefig(f'/path/to/directory/{conc}_{replicate}_reverse_transition_plot_1_to_0.svg', format='svg')
             plt.close()
 
         else:
