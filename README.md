@@ -29,6 +29,16 @@ These are the initial polymer configuration files used as inputs in the main sim
 
 ---
 
+## Sample Output Files 
+
+This folder contains 50 output files generated from a simulation with the homogeneous DNA. The normalized end-to-end distance is set to 0.6 and the protein concentration is set to 84.5 μM.
+
+Each file contains 5 columns.
+The first column contains the particle ID of each particle present in the simulation box. 
+The next 3 columns contain the position of each particle in three axes of the simulation box. 
+The last column contains the type IDs associated with each particle. Here, since the sample is from simulation with homogeneous DNA, type IDs associated with all the monomers is 2 whereas type IDs assigned to all the proteins is 24. 
+
+---
 ## Simulation Scripts
 
 `main_script_homogeneous.tcl`  
@@ -57,18 +67,23 @@ This Tcl code defines procedures for managing simulation data in ESPResSo. It co
 
 This python code computes the capillary forces exerted on "bare" DNA (DNA outside the condensate) by protein-DNA condensation. It uses the DBSCAN clustering algorithm to identify the DNA inside the condensate. Next, it computes the capillary force by calculating the bond stretch between the monomers present outside the condensate. 
 
+---
+
 ## `probability_calculation.py`
 
 This python code calculates the probability of each DNA monomer being part of the condensate. It first identifies monomers in the condensate for each output configuration, scoring them as 1 if they are inside the condensate and 0 if they are not. Next, it processes 3000 output files and averages these scores for each monomer to produce the probability profile. 
 
+---
 ## `interfacial_affinity_calculation.py`
 
 The code uses previously calculated probability profiles to identify interfacial monomers. The algorthm searches for increasing trends (left interface) and decreasing trends (right interface) in the probability profile. Once, the interfaces are identified, it computes the interfacial affinity at each interface and then averages these values to get the final average interfacial affinity.  
 
+---
 ## `kymograph.py`
 
 This python code generates a kymograph of DNA and protein distributions along the Z-axis over time. It extracts the Z-position of all the particle from output configurations. Next, it bins the data into equal spatial intervals, and normalizes by total particle count. Finally, it plots a heatmap with normalized end-to-end distance on horizontal axis and time on the vertical axis.  
 
+---
 ## Notes
 
 We have used ESPResSo-3.3.1 for performing these simulations.
