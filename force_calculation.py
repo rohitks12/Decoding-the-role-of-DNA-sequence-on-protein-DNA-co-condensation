@@ -81,7 +81,7 @@ epsilon_list = []
 vol = []
 
 # assigning directory
-directory = '/home/rohitks/co-condensation/github/output_files'
+directory = '/path/to/output_files'
 
 for filename in natsorted(os.listdir(directory)):
 	f = os.path.join(directory, filename)
@@ -196,7 +196,7 @@ print(np.std(force))
 
 #saving force in pN
 df8 = pd.DataFrame(force)
-df8.to_csv('/home/rohitks/co-condensation/github/test/test_force.dat')
+df8.to_csv('/path/to/directory/force.dat')
 
 # Plot force vs time plot
 plt.figure(figsize=(12, 6))
@@ -205,7 +205,7 @@ plt.title("Force vs time (Conc: 84.5, Re: 0.6, Replicate: 1)")
 plt.xlabel("Time")
 plt.ylabel("Force")
 plt.grid(True)
-plt.savefig('/home/rohitks/co-condensation/github/test/homo_0.6_rep_1_force_vs_time.svg', format='svg')
+plt.savefig('/path/to/directory/homo_0.6_rep_1_force_vs_time.svg', format='svg')
 plt.close()
 
 
