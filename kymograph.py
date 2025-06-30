@@ -120,10 +120,10 @@ def plot_kymograph(input_path, output_plot_path):
 
 if __name__ == "__main__":
     
-    config_dir = '/home/rohitks/co-condensation/github/output_files/'
-    analysis_output = '/home/rohitks/co-condensation/github/test/kymo_data_0.6_rep_0.npz'
+    config_dir = '/path/to/output_files/'
+    analysis_output = '/path/to/directory/kymo_data_0.6_rep_0.npz'
     process_configurations(config_dir, analysis_output)
     
     
-    plot_output = '/home/rohitks/co-condensation/github/test/heterogeneous_II_kymo_all_0.6_rep_0.svg'
+    plot_output = '/path/to/directory/kymograph.svg'
     plot_kymograph(analysis_output, plot_output)
