@@ -86,7 +86,8 @@ This python code generates a kymograph of DNA and protein distributions along th
 ---
 ## Notes
 
-We have used ESPResSo-3.3.1 for performing these simulations.
+We have used ESPResSo-3.3.1 for performing these simulations. This version of the software can be downloaded from: http://download.savannah.gnu.org/releases/espressomd/
+
 It is necessary that the type ID file and initial configuration file used in a simulation match the setup expected by the script.
 Parameters like protein concentration, interaction strength and runtime can be modified by editing the corresponding sections in the `.tcl` scripts.
 
